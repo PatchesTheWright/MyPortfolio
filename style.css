@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Droid+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Source+Sans+Pro:wght@700&display=swap");
+:root {
+  --body-font: 'Archivo Narrow', sans-serif;
+  --title-font: 'Source Sans Pro', sans-serif;
+  --sub-title-font: 'Droid Sans', sans-serif;
+  --primary-color: #0E75EC;
+  --title-font-color: white;
+  --body-font-color: #7392B5;
+  --nav-font-color: #B6D5F9;
+  --icon-color: white;
+}
+
+body {
+  background-color: #02162F;
+  margin: 0;
+  margin-left: 25px;
+  margin-right: 25px;
+  font-family: var(--body-font);
+  color: var(--body-font-color);
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    margin-left: 57px;
+    margin-right: 57px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
