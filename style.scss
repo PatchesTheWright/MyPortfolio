@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans');
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Source+Sans+Pro:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;700&family=Source+Sans+Pro:wght@700&display=swap');
 
 :root {
   --body-font: 'Archivo Narrow', sans-serif;
@@ -11,15 +11,310 @@
   --body-font-color: #7392B5;
   --nav-font-color: #B6D5F9;
   --icon-color: white;
+  --mobile-menu-color: #052347;
+  --mobile-menu-divider-color: #08478E;
+  --section-background-color: #010B17;
+}
+
+body, .primary-btn {
+  font-family: var(--body-font);
 }
 
 body {
   background-color: #02162F;
   margin: 0;
-  margin-left: 25px;
-  margin-right: 25px;
-  font-family: var(--body-font);
   color: var(--body-font-color);
+  font-size: 1rem;
+}
+
+h1 {
+  font-family: var(--title-font);
+  color: var(--title-font-color);
+  margin-bottom: 14px;
+  margin-top: 14px;
+}
+
+.hero, .about, .skills, .portfolio, .others-projects,
+.contact, .footer {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.action-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 27px;
+}
+
+.primary-btn {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 0.25em;
+  color: var(--primary-color);
+  font-size: 1em;
+  padding: 9px 34px 9px 34px;
+  font-weight: bold;
+}
+
+h4 {
+  font-style: var(--sub-title-font);
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.navbar {
+  .container {
+    color: var(--nav-font-color);
+    display: flex;
+    padding: 25px;
+    align-items: center;
+    place-content: space-between;
+
+    nav {
+      display: none;
+    }
+
+    .menu-btn {
+      width: 32px;
+      height: 25px;
+    }
+
+    .mobile-exit {
+      width: 32px;
+      height: 32px;
+      display: none;
+    }
+
+    .primary-nav {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+
+    .mobile-menu {
+      width: 33.5vh;
+      height: 100vh;
+      background-color: var(--mobile-menu-color);
+      position: fixed;
+      top: 0;
+      right: 0;   
+      display: flex;
+      justify-content: center; 
+      flex-flow: column;
+
+      .mobile-exit {
+        position: absolute;
+        top: 35px;
+        right: 25px;
+        display: block;
+      }
+
+      .divider {
+        height: 2px;
+        background-color: var(--mobile-menu-divider-color);
+        width: 169px;
+        margin-left: auto;
+        margin-right: auto;      
+      }
+
+      .primary-nav {
+        width: 100%;
+        margin-top: 33px;
+        margin-bottom: 42px;
+
+        li {
+          padding: 15px 0px 15px 33px;
+          font-size: 1.5rem;
+          width: 100%;
+        }
+        
+        .action-item{
+          margin-top: 27px;
+          display: flex;
+          justify-content: center;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  .container {
+    display: flex;
+    flex-flow: column;
+
+    .left-col {
+      order: 2;
+      margin-top: 30px;
+
+      .my-name-text{
+        font-size: 1.625rem;      
+      }
+
+      .title {
+        font-size: 1.125rem;
+        font-family: var(--title-font);
+        font-weight: 700;
+        color: var(--title-font-color);
+        display: block;
+        margin-bottom: 15px;
+      }
+
+      .content {
+        margin-top: 10px;
+        display: block;
+      }
+
+      .my-role-text {
+        color: var(--primary-color);
+      }
+    }
+
+    .right-col {
+      order: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .social-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 26px;
+
+        .social-btn {
+          padding: 14px;
+          border: 2px solid var(--primary-color);
+          border-radius: 5rem;
+          display: flex;
+          align-items: center;
+          margin-left: 10px;
+          margin-right: 10px;
+
+          img {
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
+
+      img {
+        width: 206px;
+        height: 295px;
+      }
+    }
+  }
+}
+
+.about {
+  background-color: var(--section-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    .left-col {
+      order: 1;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 17px;
+
+      img {
+        width: 261px;
+        height: 303px;
+      }
+    }
+    .right-col {
+      order: 2;
+
+      h1 {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.skills {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .container {
+    h1 {
+      text-align: center;
+    }
+
+    .capsule-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+
+      .capsule-item {
+        width: 144px;
+        height: 194px;
+        background-color: #052347;
+        border-radius: 25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        margin-left: 9px;
+        margin-right: 9px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+        .img-container {
+          height: 90px;
+          margin-bottom: 20px;
+          display: flex;
+          align-items: center;
+        }
+
+        img {
+          max-width: 90px;
+          max-height: 90px;
+        }
+
+        label {
+          font-family: var(--sub-title-font);
+        }
+
+      }
+    }
+  }
+}
+
+.portfolio {
+  .container {
+    .img-col {
+      width: 311px;
+      height: 237px;
+    }
+
+    .others-projects {
+      .container {
+
+        .project-gallery {    
+
+          .item-card {
+            img {
+              width: 229px;
+              height: 222px;
+            }
+          }
+        }
+
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) {

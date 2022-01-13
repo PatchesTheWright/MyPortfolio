@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel='stylesheet' href="style.css"/>
+  <link rel='stylesheet' href="style.css" />
 
-  <title>Document</title>
+  <title>Jonathan W Benedito</title>
 </head>
+
 <body>
   <div class="navbar">
     <div class="container">
       <img class="logo" src="./images/site-logo.svg" />
-      <ul>
-        <li>Sobre</li>
-        <li>Skills</li>
-        <li>Portfólio</li>
-        <li>Contato</li>
-        <li><button class="primary-btn">Curriculo</button></li>
-      </ul>
+      <img class="menu-btn" src="./images/icons/menu-icon.svg" />
+      <nav>
+        <img class="mobile-exit" src="./images/icons/close.svg" />
+        <div class="divider"></div>
+        <ul class="primary-nav">
+          <li>Sobre</li>
+          <li>Skills</li>
+          <li>Portfólio</li>
+          <li>Contato</li>
+          <li class="action-item"><button class="primary-btn">Curriculo</button></li>
+        </ul>
+        <div class="divider"></div>
+      </nav>
     </div>
   </div>
 
@@ -28,21 +36,24 @@
         <h4>Oi meu nome é</h4>
         <text class="title">
           <span class="my-name-text">Jonathan William Benedito</span>
-          sou <span class="my-role-text">Desenvolvedor Web Full Stacks</span>
+          sou <span class="my-role-text">Desenvolvedor Web Full Stack</span>
         </text>
-        <text>
-          is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+        <text class="content">
+          is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+          dummy
         </text>
-        <button class="primary-btn">Veja meus trabalhos</button>
+        <div class="action-row">
+          <button class="primary-btn">Veja meus trabalhos</button>
+        </div>
       </div>
 
       <div class="right-col">
         <img src="./images/hero-img.png" />
         <div class="social-container">
-          <span><img src="./images/icons/whatsapp.svg"></span>
-          <span><img src="./images/icons/github.svg"></span>
-          <span><img src="./images/icons/discord-icon.svg"></span>
-          <span><img src="./images/icons/linkedin-color.svg"></span>
+          <span class="social-btn"><img src="./images/icons/whatsapp.svg"></span>
+          <span class="social-btn"><img src="./images/icons/github.svg"></span>
+          <span class="social-btn"><img src="./images/icons/discord-icon.svg"></span>
+          <span class="social-btn"><img src="./images/icons/linkedin-icon.svg"></span>
         </div>
       </div>
     </div>
@@ -53,93 +64,335 @@
       <div class="left-col">
         <img src="images/about-img.png">
       </div>
-      
+
       <div class="right-col">
         <h1>Sobre Mim</h1>
         <text>
-          is simply dummy text of the printing and typesetting industry. 
-          Lorem Ipsum has been the industry's standard dummy text ever since 
-          the 1500s, when an unknown printer took a galley of type and 
-          scrambled it to make a type specimen book. It has survived not 
-          only 
+          is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since
+          the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not
+          only
         </text>
-        <button class="primary-btn">Entre em contato</button>
+        <div class="action-row">
+          <button class="primary-btn">Entre em contato</button>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="skills">
     <div class="container">
-      <div class="capsule-item">
-        <img src="images/react-logo.svg"/>
-        <label>React js</label>
+      <h1>Skills</h1>
+      <div class="capsule-wrap">
+        <div class="capsule-item">
+          <div class="img-container">
+            <img src="images/react-logo.svg" />
+          </div>
+          <label>React js</label>
+        </div>
+
+        <div class="capsule-item">
+          <div class="img-container">
+            <img src="images/asp-net-core-logo.svg" />
+          </div>
+          <label>Asp.NET Core</label>
+        </div>
+
+        <div class="capsule-item">
+          <div class="img-container">
+            <img src="images/logo-javascript.png" />
+          </div> 
+          <label>Javascript</label>
+        </div>
+
+        <div class="capsule-item">
+          <div class="img-container">
+            <img src="images/logo-css-3.png" />
+          </div>       
+          <label>CSS</label>
+        </div>
+
+        <div class="capsule-item">
+          <div class="img-container">
+            <img src="images/c-sharp-logo.svg" />
+          </div>             
+          <label>C#</label>
+        </div>
+
+        <div class="capsule-item">
+          <div class="img-container">
+            <img src="images/logo-mysql.png" />
+          </div>         
+          <label>MySQL</label>
+        </div>
+
+        <div class="capsule-item">
+          <div class="img-container">
+            <img src="images/bootstrap-logo.svg" />
+          </div>      
+          <label>Bootstrap</label>
+        </div>
+
+        <div class="capsule-item">
+          <div class="img-container">
+            <img src="images/sass-logo.png" />
+          </div>          
+          <label>Sass</label>
+        </div>
+
+        <div class="capsule-item">
+          <div class="img-container">
+            <img src="images/html5-logo.png" />
+          </div>            
+          <label>HTML</label>
+        </div>
       </div>
 
-      <div class="capsule-item">
-        <img src="images/react-logo.svg"/>
-        <label>React js</label>
-      </div>
-
-      <div class="capsule-item">
-        <img src="images/react-logo.svg"/>
-        <label>React js</label>
-      </div>
-
-      <div class="capsule-item">
-        <img src="images/react-logo.svg"/>
-        <label>React js</label>
-      </div>
-
-      <div class="capsule-item">
-        <img src="images/react-logo.svg"/>
-        <label>React js</label>
-      </div>
-
-      <div class="capsule-item">
-        <img src="images/react-logo.svg"/>
-        <label>React js</label>
-      </div>
-
-      <div class="capsule-item">
-        <img src="images/react-logo.svg"/>
-        <label>React js</label>
-      </div>
-
-      <div class="capsule-item">
-        <img src="images/react-logo.svg"/>
-        <label>React js</label>
-      </div>
-
-      <div class="capsule-item">
-        <img src="images/react-logo.svg"/>
-        <label>React js</label>
-      </div>
     </div>
   </section>
 
   <section class="portfolio">
     <div class="container">
+      <h1>Portifólio</h1>
       <div class="project-highlight">
-        <img class="left-col" src="images/site-portifolio.png"/>
-        
-        <div class="right-col">
+        <img class="img-col" src="images/site-portifolio.png" />
+
+        <div class="info-col">
           <h4>Projeto</h4>
           <div class="title-row">
             <h2>Automação Comercial</h2>
-            <img class="left-col" src="images/icons/github.svg"/>
+            <img src="images/icons/github.svg" />
           </div>
           <text>
-            is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since 
-            the 1500s, when an unknown printer took a galley of type and scrambled 
-            it to make a type specimen book. It has survived not only 
+            is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and scrambled
+            it to make a type specimen book. It has survived not only
           </text>
           <div class="tag-container">
             <span class="tag-btn">React</span>
+            <span class="tag-btn">CSS</span>
+            <span class="tag-btn">JS</span>
+            <span class="tag-btn">MySQL</span>
+            <span class="tag-btn">Asp.NET Core</span>
+            <span class="tag-btn">C#</span>
           </div>
         </div>
       </div>
+
+      <div class="project-highlight-right">
+        <img class="img-col" src="images/site-portifolio.png" />
+
+        <div class="info-col">
+          <h4>Projeto</h4>
+          <div class="title-row">
+            <h2>Automação Comercial</h2>
+            <img class="left-col" src="images/icons/github.svg" />
+          </div>
+          <text>
+            is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and scrambled
+            it to make a type specimen book. It has survived not only
+          </text>
+          <div class="tag-container">
+            <span class="tag-btn">React</span>
+            <span class="tag-btn">CSS</span>
+            <span class="tag-btn">JS</span>
+            <span class="tag-btn">MySQL</span>
+            <span class="tag-btn">Asp.NET Core</span>
+            <span class="tag-btn">C#</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-highlight">
+        <img class="img-col" src="images/site-portifolio.png" />
+
+        <div class="info-col">
+          <h4>Projeto</h4>
+          <div class="title-row">
+            <h2>Automação Comercial</h2>
+            <img src="images/icons/github.svg" />
+          </div>
+          <text>
+            is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and scrambled
+            it to make a type specimen book. It has survived not only
+          </text>
+          <div class="tag-container">
+            <span class="tag-btn">React</span>
+            <span class="tag-btn">CSS</span>
+            <span class="tag-btn">JS</span>
+            <span class="tag-btn">MySQL</span>
+            <span class="tag-btn">Asp.NET Core</span>
+            <span class="tag-btn">C#</span>
+          </div>
+        </div>
+      </div>
+
+      <section class="others-projects">
+        <div class="container">
+          <h1>Outros Projetos</h1>
+          <div class="project-gallery">
+            <div class="item-card">
+              <img src="images/mini-site-portfolio.png" />
+              <div class="title-row">
+                <h5>Spotify</h5>
+                <img src="images/icons/github.svg" />
+              </div>
+              <text>
+                is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard
+              </text>
+              <div class="tag-container">
+                <a href="#">Asp.NET Core</a>
+                <a href="#">Asp.NET Core</a>
+                <a href="#">React</a>
+                <a href="#">Asp.NET Core</a>
+                <a href="#">Asp.NET Core</a>
+                <a href="#">React</a>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <img src="images/mini-site-portfolio.png" />
+              <div class="title-row">
+                <h5>Spotify</h5>
+                <img src="images/icons/github.svg" />
+              </div>
+              <text>
+                is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard
+              </text>
+              <div class="tag-container">
+                <a href="#">Asp.NET Core</a>
+                <a href="#">Asp.NET Core</a>
+                <a href="#">React</a>
+                <a href="#">Asp.NET Core</a>
+                <a href="#">Asp.NET Core</a>
+                <a href="#">React</a>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <img src="images/mini-site-portfolio.png" />
+              <div class="title-row">
+                <h5>Spotify</h5>
+                <img src="images/icons/github.svg" />
+              </div>
+              <text>
+                is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard
+              </text>
+              <div class="tag-container">
+                <a href="#">Asp.NET Core</a>
+                <a href="#">Asp.NET Core</a>
+                <a href="#">React</a>
+                <a href="#">Asp.NET Core</a>
+                <a href="#">Asp.NET Core</a>
+                <a href="#">React</a>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <img src="images/mini-site-portfolio.png" />
+              <div class="title-row">
+                <h5>Spotify</h5>
+                <img src="images/icons/github.svg" />
+              </div>
+              <text>
+                is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard
+              </text>
+              <div class="tag-container">
+                <a href="#">Asp.NET Core</a>
+                <a href="#">Asp.NET Core</a>
+                <a href="#">React</a>
+                <a href="#">Asp.NET Core</a>
+                <a href="#">Asp.NET Core</a>
+                <a href="#">React</a>
+              </div>
+            </div>
+          </div>
+          <button class="primary-btn">Ver mais</button>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <h1>Contato</h1>
+          <div class="content-row">
+            <div class="info-col">
+              <h5>Vamos conversar!</h5>
+              <text>
+                Sinta-se a vontade em me contatar por e-mail, telefone ou
+                Whatsapp, responderei assim que for possível.
+              </text>
+            </div>
+
+            <div class="form-col">
+              <form>
+                <div class="form-row">
+                  <div class="form-input">
+                    <label>Nome</label>
+                    <input type="text" />
+                  </div>
+
+                  <div class="form-input">
+                    <label>Telefone</label>
+                    <input type="text" />
+                  </div>
+                </div>
+
+                <div class="form-input">
+                  <label>E-mail</label>
+                  <input type="text" />
+                </div>
+
+                <div class="form-textarea">
+                  <label>Mensagem</label>
+                  <textarea></textarea>
+                </div>
+
+                <button class="primary-btn" type="submit">Enviar mensagem</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="social-row">
+            <img class="logo" src="./images/site-logo.svg" />
+            <div class="social-container">
+              <span class="social-btn"><img src="./images/icons/whatsapp.svg"></span>
+              <span class="social-btn"><img src="./images/icons/github.svg"></span>
+              <span class="social-btn"><img src="./images/icons/discord-icon.svg"></span>
+              <span class="social-btn"><img src="./images/icons/linkedin-color.svg"></span>
+            </div>
+          </div>
+
+          <div class="navigation">
+            <ul class="nav">
+              <li>Sobre</li>
+              <li>Skills</li>
+              <li>Portfólio</li>
+              <li>Contato</li>
+              <li><button class="primary-btn">Curriculo</button></li>
+            </ul>
+            <text>
+              Design e programado por Jonathan William Benedito
+            </text>
+          </div>
+        </div>
+      </footer>
+
     </div>
   </section>
 </body>
+
 </html>
