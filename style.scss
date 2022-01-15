@@ -32,6 +32,8 @@ h1 {
   color: var(--title-font-color);
   margin-bottom: 14px;
   margin-top: 14px;
+  text-align: center;
+  font-size: 1.625rem;
 }
 
 .hero, .about, .skills, .portfolio, .others-projects,
@@ -55,6 +57,15 @@ h1 {
   font-size: 1em;
   padding: 9px 34px 9px 34px;
   font-weight: bold;
+}
+
+h3 {
+  font-style: var(--title-font);
+  color: var(--title-font-color);
+  font-weight: bold;
+  font-size: 1.125;
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
 
 h4 {
@@ -293,25 +304,152 @@ h4 {
 }
 
 .portfolio {
+  background-color: var(--section-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   .container {
-    .img-col {
-      width: 311px;
-      height: 237px;
-    }
 
-    .others-projects {
-      .container {
+    .project-highlight, .project-highlight-right {
+      margin-top: 40px;
+      margin-bottom: 70px;
 
-        .project-gallery {    
+      .img-col {
+        min-width: 311px;
+        max-height: 237px;
+        margin-bottom: 20px;
+      }
 
-          .item-card {
-            img {
-              width: 229px;
-              height: 222px;
-            }
+      .info-col {
+        h2 {
+          padding: 0;
+          margin: 0;
+          color: var(--title-font-color);
+          font-size: 1.25rem;
+        }
+
+        h4 {
+          color: var(--primary-color);
+          margin-bottom: 4px;
+        }
+
+        text {
+          display: block;
+          margin-bottom: 40px;
+        }
+  
+        .title-row {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+  
+          img {
+            width: 32px;
+            height: 32px;
+            margin-left: 30px;
+            margin-right: 30px;
           }
         }
 
+        .tag-container {
+          display: flex;        
+          flex-wrap: wrap;
+          font-size: 0.875rem;
+
+          .tag-btn {
+            border: 2px solid var(--primary-color);
+            border-radius: 19px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-weight: bold;
+            margin-right: 20px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .project-highlight-right {
+      text-align: right;
+
+      .title-row {
+        flex-direction: row-reverse;
+      }
+
+      .tag-container {
+        justify-content: right;
+      }
+    }
+
+    .others-projects {
+      .container {  
+        .project-gallery {    
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          .item-card {
+            background-color: #02162F;
+            border-radius: 0.5rem;
+            display: flex;
+            flex-flow: column;
+            padding: 18px;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            
+            img {
+              width: 100%;
+              height: 222px;
+            }
+
+            .title-row {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-top: 10px;
+              margin-bottom: 10px;
+
+              h5 {
+                font-size: 1.25rem;
+                color: var(--title-font-color);
+                padding: 0;
+                margin: 0;
+              }
+
+              img {
+                width: 24px;
+                height: 24px;
+              }
+            }
+
+            .tag-container {
+              margin-top: 15px;
+
+              a {
+                text-decoration: none;
+                font-size: 0.75rem;
+                color: #576A81;
+                font-family: var(--sub-title-font);
+                margin-right: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .container {
+    .content-row {
+      .info-col {
+        margin-top: 40px;
       }
     }
   }
