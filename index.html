@@ -359,24 +359,24 @@
           <form>
             <div class="form-row">
               <div class="form-input">
-                <label>Nome</label>
-                <input type="text" value="Fernando de Noronha Machado da Silva"/>
+                <input class="input" id="name" type="text" value="Fernando de Noronha Machado da Silva"/>
+                <label class="label" id="name">Nome</label>
               </div>
 
               <div class="form-input">
+                <input class="input" id="phone" type="text" placeholder=" "/>
                 <label for="phone" class="label">Telefone</label>
-                <input id="phone" type="text" placeholder=" "/>
               </div>
             </div>
 
             <div class="form-input">
-              <label>E-mail</label>
-              <input type="text"  placeholder=" "/>
+              <input class="input" type="email" id="email" placeholder=" "/>
+              <label class="label" id="email">E-mail</label>
             </div>
 
             <div class="form-textarea">
-              <label>Mensagem</label>
-              <textarea></textarea>
+              <textarea class="input" id="message"></textarea>
+              <label class="label" id="message">Mensagem</label>
             </div>
 
             <button class="primary-btn" type="submit">Enviar mensagem</button>

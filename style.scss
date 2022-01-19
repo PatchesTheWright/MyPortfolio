@@ -495,15 +495,18 @@ h4 {
       .form-col {
         margin-top: 60px;
 
+        .form-input, .form-textarea {
+          font-size: 1rem;
+          font-weight: bold;
+          color: var(--inactive-input-label-color);
+        }
+
         .form-input {         
           width: 100%;
           margin-bottom: 45px;
           position: relative;
 
-          label {
-            font-size: 1rem;
-            font-weight: bold;
-            color: var(--inactive-input-label-color);
+          .label {              
             display: block;
             position: absolute;
             bottom: 7px;
@@ -524,23 +527,53 @@ h4 {
             padding: 0;
             padding-bottom: 5px;
             padding-top: 5px;
+            transition: border-color 200ms ease-in;
           }
 
-          input:focus {
+          .input:focus {
             outline: none;
           }
         }
 
-        .form-input:focus-within{
-          label {
-            color: var(--primary-color);
-            bottom: 35px;
-            font-size: 0.875rem;
-          }
-          input {
-            border-color: var(--primary-color);
+        .form-textarea {
+          textarea {
+            background: none;
+            display: block;
+            border: none;
+            border-bottom: 2px solid var(--input-border-color);
+            position: relative;
+            color: var(--input-color);
+            font-family: var(--body-font);
+            font-size: 1rem;
+            width: 100%;
+            padding: 0;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            transition: border-color 200ms ease-in;
+            resize: none;
+            
+            &:focus {
+              outline: none;
+            }
           }
 
+        }
+
+        .form-input:focus-within{
+          .label {
+            color: var(--primary-color) !important;
+          }
+          .input {
+            border-color: var(--primary-color);
+          }
+        }
+      
+        .input:focus ~ .label,
+        .input:not(:placeholder-shown).input:not(:focus)
+        ~.label {
+          color: var(--inactive-input-label-color);
+          bottom: 35px;
+          font-size: 0.875rem;
         }
       }
     }
