@@ -14,9 +14,9 @@
   <div class="navbar">
     <div class="container">
       <img class="logo" src="./images/site-logo.svg" />
-      <img class="menu-btn" src="./images/icons/menu-icon.svg" />
+      <img class="menu-btn" id="mobile-cta" src="./images/icons/menu-icon.svg" />
       <nav>
-        <img class="mobile-exit" src="./images/icons/close.svg" />
+        <img class="mobile-exit" id="mobile-exit" src="./images/icons/close.svg" />
         <div class="divider"></div>
         <ul class="primary-nav">
           <li>Sobre</li>
@@ -48,7 +48,7 @@
       </div>
 
       <div class="right-col">
-        <img src="./images/hero-img.png" />
+        <img class="profile-photo" src="./images/hero-img.png" />
         <div class="social-container">
           <span class="social-btn"><img src="./images/icons/whatsapp.svg"></span>
           <span class="social-btn"><img src="./images/icons/github.svg"></span>
@@ -102,49 +102,49 @@
         <div class="capsule-item">
           <div class="img-container">
             <img src="images/logo-javascript.png" />
-          </div> 
+          </div>
           <label>Javascript</label>
         </div>
 
         <div class="capsule-item">
           <div class="img-container">
             <img src="images/logo-css-3.png" />
-          </div>       
+          </div>
           <label>CSS</label>
         </div>
 
         <div class="capsule-item">
           <div class="img-container">
             <img src="images/c-sharp-logo.svg" />
-          </div>             
+          </div>
           <label>C#</label>
         </div>
 
         <div class="capsule-item">
           <div class="img-container">
             <img src="images/logo-mysql.png" />
-          </div>         
+          </div>
           <label>MySQL</label>
         </div>
 
         <div class="capsule-item">
           <div class="img-container">
             <img src="images/bootstrap-logo.svg" />
-          </div>      
+          </div>
           <label>Bootstrap</label>
         </div>
 
         <div class="capsule-item">
           <div class="img-container">
             <img src="images/sass-logo.png" />
-          </div>          
+          </div>
           <label>Sass</label>
         </div>
 
         <div class="capsule-item">
           <div class="img-container">
             <img src="images/html5-logo.png" />
-          </div>            
+          </div>
           <label>HTML</label>
         </div>
       </div>
@@ -158,7 +158,7 @@
 
       <div class="project-highlight">
         <img class="img-col" src="images/site-portifolio.png" />
-        
+
         <div class="info-col">
           <h4>Projeto</h4>
           <div class="title-row">
@@ -184,7 +184,7 @@
 
       <div class="project-highlight-right">
         <img class="img-col" src="images/site-portifolio.png" />
-        
+
         <div class="info-col">
           <h4>Projeto</h4>
           <div class="title-row">
@@ -210,7 +210,7 @@
 
       <div class="project-highlight">
         <img class="img-col" src="images/site-portifolio.png" />
-        
+
         <div class="info-col">
           <h4>Projeto</h4>
           <div class="title-row">
@@ -342,7 +342,7 @@
             <div class="item">
               <div class="icon-container">
                 <img src="images/icons/email.svg" />
-              </div>        
+              </div>
               <label>teste_email@gmail.com</label>
             </div>
 
@@ -350,7 +350,7 @@
               <div class="icon-container">
                 <img src="images/icons/whatsapp.svg" />
               </div>
-              <label>teste_email@gmail.com</label>
+              <label>(19) 99999-9999</label>
             </div>
           </div>
         </div>
@@ -359,27 +359,30 @@
           <form>
             <div class="form-row">
               <div class="form-input">
-                <input class="input" id="name" type="text" value="Fernando de Noronha Machado da Silva"/>
+                <input class="input" id="name" type="text" value="Fernando de Noronha Machado da Silva" />
                 <label class="label" id="name">Nome</label>
               </div>
 
               <div class="form-input">
-                <input class="input" id="phone" type="text" placeholder=" "/>
+                <input class="input" id="phone" type="text" placeholder=" " />
                 <label for="phone" class="label">Telefone</label>
               </div>
             </div>
 
             <div class="form-input">
-              <input class="input" type="email" id="email" placeholder=" "/>
+              <input class="input" type="email" id="email" placeholder=" " />
               <label class="label" id="email">E-mail</label>
             </div>
 
             <div class="form-textarea">
-              <textarea class="input" id="message"></textarea>
+              <textarea class="textarea" id="message" placeholder=" "></textarea>
               <label class="label" id="message">Mensagem</label>
             </div>
 
-            <button class="primary-btn" type="submit">Enviar mensagem</button>
+            <div class="action-row">
+              <button class="primary-btn" type="submit">Enviar mensagem</button>
+            </div>
+
           </form>
         </div>
       </div>
@@ -394,7 +397,7 @@
           <span class="social-btn"><img src="./images/icons/whatsapp.svg"></span>
           <span class="social-btn"><img src="./images/icons/github.svg"></span>
           <span class="social-btn"><img src="./images/icons/discord-icon.svg"></span>
-          <span class="social-btn"><img src="./images/icons/linkedin-color.svg"></span>
+          <span class="social-btn"><img src="./images/icons/linkedin-icon.svg"></span>
         </div>
       </div>
 
@@ -404,14 +407,29 @@
           <li>Skills</li>
           <li>Portfólio</li>
           <li>Contato</li>
-          <li><button class="primary-btn">Curriculo</button></li>
         </ul>
-        <text>
-          Design e programado por Jonathan William Benedito
-        </text>
+        <div class="credits-row">
+          <text class="author">
+            Design e programado por Jonathan William Benedito
+          </text>
+        </div>
       </div>
     </div>
   </footer>
+
+  <script>
+    const mobileBtn = document.getElementById('mobile-cta');
+    nav = document.querySelector('nav');
+    mobileBtnExit = document.getElementById('mobile-exit');
+
+    mobileBtn.addEventListener('click', () => {
+      nav.classList.add('mobile-menu');
+    })
+
+    mobileBtnExit.addEventListener('click', () => {
+      nav.classList.remove('mobile-menu');
+    })
+  </script>
 </body>
 
 </html>
