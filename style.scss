@@ -41,11 +41,14 @@ h1 {
   font-size: 1.625rem;
 }
 
+h2 {
+  font-family: var(--title-font);
+}
+
 .hero,
 .about,
 .skills,
 .portfolio,
-.others-projects,
 .contact,
 .footer {
   padding-left: 25px;
@@ -294,6 +297,7 @@ h4 {
 
         .img-container {
           height: 90px;
+          margin-top: 20px;
           margin-bottom: 20px;
           display: flex;
           align-items: center;
@@ -306,6 +310,10 @@ h4 {
 
         label {
           font-family: var(--sub-title-font);
+          text-align: center;
+          width: 90px;
+          height: 50px;
+          margin: 0;
         }
       }
     }
@@ -324,7 +332,7 @@ h4 {
       margin-bottom: 70px;
 
       .img-col {
-        min-width: 311px;
+        max-width: 311px;
         max-height: 237px;
         margin-bottom: 20px;
       }
@@ -665,9 +673,32 @@ h4 {
     font-size: 1.25rem;
   }
 
+  h1 {
+    font-size: 3.125rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
   h4 {
     font-size: 1.5rem;
   }
+
+.hero,
+.about,
+.skills,
+.portfolio,
+.contact,
+.footer {
+  padding-left: 140px;
+  padding-right: 140px;
+
+}
+
+.action-row {
+  justify-content: left;
+}
 
   .navbar {
     .container {
@@ -700,14 +731,17 @@ h4 {
   }
 
   .hero {
+    padding-bottom: 75px;
+
     .container {
-      padding-left: 140px;
-      padding-right: 140px;
       flex-flow: row;
+      justify-content: space-between;
+      align-items: center;
 
       .left-col {
         max-width: 660px;
         order: 1;
+        flex-grow: 2;
 
         .title {
           font-size: 1.875rem;
@@ -717,14 +751,124 @@ h4 {
             display: block;
           }
         }
-
-        .action-row {
-          justify-content: left;
-        }
       }
       
       .right-col {
         order: 2;
+        flex-direction: row;
+        justify-content: right;
+        margin-left: 85px;
+        flex-grow: 1;
+
+        .profile-photo {
+          width: 286px;
+          height: 409px;
+        }
+
+        .social-container {
+          flex-direction: column;
+          margin-left: 30px;
+
+          .social-btn {
+            margin-top: 8px;
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .about {
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+    .container {
+      flex-flow: row;
+      align-items: center;
+
+      .left-col {
+        img {
+          min-width: 407px;
+          min-height: 473px;
+        }
+        margin-right: 95px;
+      }
+
+      .right-col {
+        h1 {
+          text-align: left;
+        }
+
+        .action-row {
+          margin-top: 56px;
+        }
+        
+      }
+    }
+  }
+
+  .skills {
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+    .container {
+      .capsule-wrap {
+        .capsule-item {
+          margin-right: 20px;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  .portfolio {
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+    .container {
+      .project-highlight {
+        flex-flow: row;
+
+        .img-col {
+          margin-right: 58px;
+        }
+      }
+
+      .project-highlight-right {
+        flex-flow: row-reverse;
+
+        .img-col {
+          margin-left: 58px;
+        }
+      }
+
+      .project-highlight, 
+      .project-highlight-right {
+        display: flex;
+
+        .img-col {
+          max-width: 441px;
+          max-height: 337px;
+        }
+
+        .info-col {
+          h2 {
+            font-size: 2.5rem;
+          }
+        }
+      }
+
+      .others-projects {
+        .container {
+          .project-gallery {
+            justify-content: space-between;
+
+            .item-card {      
+              width: 230px;
+
+            }
+          }
+        }
       }
     }
   }
