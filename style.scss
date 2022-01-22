@@ -18,6 +18,8 @@
   --inactive-input-label-color: #576a81;
   --input-color: white;
   --input-border-color: #08478e;
+  --active-btn-color: #010b17;
+  --hover-btn-background: rgba(98, 171, 255, 0.116);
 }
 
 body,
@@ -70,6 +72,20 @@ h2 {
   font-size: 1em;
   padding: 9px 34px 9px 34px;
   font-weight: bold;
+  
+
+  &:hover {
+    background-color: var(--hover-btn-background);
+    cursor: pointer;
+    transition: background-color 200ms ease-in;
+  }
+
+  &:active {
+    background-color: var(--primary-color);
+    color: var(--active-btn-color);
+    transition: background-color 50ms ease-in,
+                color 50ms ease-in;
+  }
 }
 
 h3 {
@@ -95,17 +111,31 @@ h4 {
 
   .social-btn {
     padding: 14px;
-    border: 2px solid var(--primary-color);
+    border: 3px solid var(--primary-color);
     border-radius: 5rem;
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-right: 10px;
 
+    &:hover {
+      background-color: var(--hover-btn-background);
+      cursor: pointer;
+      transition: background-color 200ms ease-in;
+    }
+  
+    &:active {
+      background-color: var(--primary-color);
+      color: var(--active-btn-color);
+      transition: background-color 50ms ease-in;
+    }
+
     img {
       width: 22px;
       height: 22px;
     }
+
+
   }
 }
 
@@ -360,11 +390,16 @@ h4 {
           align-items: center;
           margin-bottom: 10px;
 
-          img {
+          .git-btn {
             width: 32px;
             height: 32px;
             margin-left: 30px;
             margin-right: 30px;
+            cursor: pointer;
+
+            &:hover {
+              filter: invert(41%) sepia(78%) saturate(5754%) hue-rotate(202deg) brightness(99%) contrast(89%);
+            }
           }
         }
 
@@ -374,7 +409,7 @@ h4 {
           font-size: 0.875rem;
 
           .tag-btn {
-            border: 2px solid var(--primary-color);
+            border: 3px solid var(--primary-color);
             border-radius: 19px;
             padding-top: 5px;
             padding-bottom: 5px;
@@ -383,6 +418,19 @@ h4 {
             font-weight: bold;
             margin-right: 20px;
             margin-bottom: 10px;
+
+            &:hover {
+              background-color: var(--hover-btn-background);
+              cursor: pointer;
+              transition: background-color 200ms ease-in;
+            }
+          
+            &:active {
+              background-color: var(--primary-color);
+              color: var(--active-btn-color);
+              transition: background-color 50ms ease-in,
+                          color 50ms ease-in;
+            }
           }
         }
       }
@@ -405,7 +453,7 @@ h4 {
         .project-gallery {
           display: flex;
           flex-wrap: wrap;
-          justify-content: center;
+          justify-content: left;
 
           .item-card {
             background-color: #02162f;
@@ -419,6 +467,10 @@ h4 {
             img {
               width: 100%;
               height: 222px;
+            }
+
+            text {
+              font-size: 1rem;
             }
 
             .title-row {
@@ -476,7 +528,7 @@ h4 {
 
         .contact-row {
           display: flex;
-          justify-content: space-between;
+          justify-content: center;
           margin-top: 60px;
 
           .item {
@@ -484,6 +536,9 @@ h4 {
             flex-flow: column;
             align-items: center;
             justify-content: center;
+            margin-right: 20px;
+            margin-left: 20px;
+            width: 150px;
 
             .icon-container {
               width: 48px;
@@ -645,7 +700,7 @@ h4 {
         list-style: none;
         padding: 0;
         margin: 0;
-        padding: 25px;
+        padding: 25px 25px 25px 0;
         color: var(--nav-font-color);
 
         li {
@@ -656,7 +711,7 @@ h4 {
       .credits-row {
         display: flex;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 25px;
 
         .author {
           text-align: center;   
@@ -696,9 +751,7 @@ h4 {
 
 }
 
-.action-row {
-  justify-content: left;
-}
+
 
   .navbar {
     .container {
@@ -751,6 +804,10 @@ h4 {
             display: block;
           }
         }
+
+        .action-row {
+          justify-content: left;
+        }
       }
       
       .right-col {
@@ -801,8 +858,8 @@ h4 {
 
         .action-row {
           margin-top: 56px;
-        }
-        
+          justify-content: left;
+        }      
       }
     }
   }
@@ -814,6 +871,8 @@ h4 {
     .container {
       .capsule-wrap {
         .capsule-item {
+          width: 175px;
+          height: 220px;
           margin-right: 20px;
           margin-left: 20px;
         }
@@ -860,13 +919,107 @@ h4 {
 
       .others-projects {
         .container {
+          h1 {
+            text-align: left;
+            margin-bottom: 30px;
+          }
+
           .project-gallery {
-            justify-content: space-between;
+            margin-left: -15px;
+            margin-right: -15px;
 
             .item-card {      
               width: 230px;
-
+              margin-right: 15px;
+              margin-left: 15px;
+              margin-top: 15px;
+              margin-bottom: 15px;
             }
+
+            .action-row {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .container {
+      .content-row {
+        display: flex;
+        flex-flow: row;
+
+        .info-col{
+          width: 400px;
+          padding: 56px 56px 56px 0;
+          border-bottom: none;
+          border-right: 2px solid var(--body-divider-color);
+          order: 1;
+          
+
+          h3 {
+            font-size: 1.875rem;
+          }
+
+          .contact-row {
+            margin-top: 80px;
+          }
+        }
+
+        .form-col {
+          width: 100%;
+          padding: 40px 0px 56px 56px;
+          order:2;
+
+          .form-row {
+            display: flex;
+
+            .name-input {
+              width: 70%;
+              margin-right: 40px;
+            }
+
+            .phone-input {
+              width: 30%;
+            }
+          }
+
+          .action-row {
+            justify-content: right;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+    .container {
+      .social-row {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .navigation {
+        display: flex;
+        justify-content: space-between;
+
+        .nav {
+          width: 300px;
+        }
+
+        .credits-row {
+          .author {
+            font-size: 1rem;
           }
         }
       }

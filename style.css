@@ -16,6 +16,8 @@
   --inactive-input-label-color: #576a81;
   --input-color: white;
   --input-border-color: #08478e;
+  --active-btn-color: #010b17;
+  --hover-btn-background: rgba(98, 171, 255, 0.116);
 }
 
 body,
@@ -74,6 +76,20 @@ h2 {
   font-weight: bold;
 }
 
+.primary-btn:hover {
+  background-color: var(--hover-btn-background);
+  cursor: pointer;
+  -webkit-transition: background-color 200ms ease-in;
+  transition: background-color 200ms ease-in;
+}
+
+.primary-btn:active {
+  background-color: var(--primary-color);
+  color: var(--active-btn-color);
+  -webkit-transition: background-color 50ms ease-in, color 50ms ease-in;
+  transition: background-color 50ms ease-in, color 50ms ease-in;
+}
+
 h3 {
   font-style: var(--title-font);
   color: var(--title-font-color);
@@ -102,7 +118,7 @@ h4 {
 
 .social-container .social-btn {
   padding: 14px;
-  border: 2px solid var(--primary-color);
+  border: 3px solid var(--primary-color);
   border-radius: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -112,6 +128,20 @@ h4 {
           align-items: center;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.social-container .social-btn:hover {
+  background-color: var(--hover-btn-background);
+  cursor: pointer;
+  -webkit-transition: background-color 200ms ease-in;
+  transition: background-color 200ms ease-in;
+}
+
+.social-container .social-btn:active {
+  background-color: var(--primary-color);
+  color: var(--active-btn-color);
+  -webkit-transition: background-color 50ms ease-in;
+  transition: background-color 50ms ease-in;
 }
 
 .social-container .social-btn img {
@@ -439,12 +469,19 @@ h4 {
   margin-bottom: 10px;
 }
 
-.portfolio .container .project-highlight .info-col .title-row img,
-.portfolio .container .project-highlight-right .info-col .title-row img {
+.portfolio .container .project-highlight .info-col .title-row .git-btn,
+.portfolio .container .project-highlight-right .info-col .title-row .git-btn {
   width: 32px;
   height: 32px;
   margin-left: 30px;
   margin-right: 30px;
+  cursor: pointer;
+}
+
+.portfolio .container .project-highlight .info-col .title-row .git-btn:hover,
+.portfolio .container .project-highlight-right .info-col .title-row .git-btn:hover {
+  -webkit-filter: invert(41%) sepia(78%) saturate(5754%) hue-rotate(202deg) brightness(99%) contrast(89%);
+          filter: invert(41%) sepia(78%) saturate(5754%) hue-rotate(202deg) brightness(99%) contrast(89%);
 }
 
 .portfolio .container .project-highlight .info-col .tag-container,
@@ -459,7 +496,7 @@ h4 {
 
 .portfolio .container .project-highlight .info-col .tag-container .tag-btn,
 .portfolio .container .project-highlight-right .info-col .tag-container .tag-btn {
-  border: 2px solid var(--primary-color);
+  border: 3px solid var(--primary-color);
   border-radius: 19px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -468,6 +505,22 @@ h4 {
   font-weight: bold;
   margin-right: 20px;
   margin-bottom: 10px;
+}
+
+.portfolio .container .project-highlight .info-col .tag-container .tag-btn:hover,
+.portfolio .container .project-highlight-right .info-col .tag-container .tag-btn:hover {
+  background-color: var(--hover-btn-background);
+  cursor: pointer;
+  -webkit-transition: background-color 200ms ease-in;
+  transition: background-color 200ms ease-in;
+}
+
+.portfolio .container .project-highlight .info-col .tag-container .tag-btn:active,
+.portfolio .container .project-highlight-right .info-col .tag-container .tag-btn:active {
+  background-color: var(--primary-color);
+  color: var(--active-btn-color);
+  -webkit-transition: background-color 50ms ease-in, color 50ms ease-in;
+  transition: background-color 50ms ease-in, color 50ms ease-in;
 }
 
 .portfolio .container .project-highlight-right {
@@ -493,9 +546,9 @@ h4 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
 
 .portfolio .container .others-projects .container .project-gallery .item-card {
@@ -516,6 +569,10 @@ h4 {
 .portfolio .container .others-projects .container .project-gallery .item-card img {
   width: 100%;
   height: 222px;
+}
+
+.portfolio .container .others-projects .container .project-gallery .item-card text {
+  font-size: 1rem;
 }
 
 .portfolio .container .others-projects .container .project-gallery .item-card .title-row {
@@ -575,9 +632,9 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 60px;
 }
 
@@ -595,6 +652,9 @@ h4 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-right: 20px;
+  margin-left: 20px;
+  width: 150px;
 }
 
 .contact .container .content-row .info-col .contact-row .item .icon-container {
@@ -768,7 +828,7 @@ h4 {
   list-style: none;
   padding: 0;
   margin: 0;
-  padding: 25px;
+  padding: 25px 25px 25px 0;
   color: var(--nav-font-color);
 }
 
@@ -783,7 +843,7 @@ h4 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .footer .container .navigation .credits-row .author {
@@ -813,11 +873,6 @@ h4 {
   .footer {
     padding-left: 140px;
     padding-right: 140px;
-  }
-  .action-row {
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
   }
   .navbar .container {
     padding-left: 140px;
@@ -880,6 +935,11 @@ h4 {
     font-size: 3.125rem;
     display: block;
   }
+  .hero .container .left-col .action-row {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
   .hero .container .right-col {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -936,12 +996,17 @@ h4 {
   }
   .about .container .right-col .action-row {
     margin-top: 56px;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
   }
   .skills {
     padding-top: 75px;
     padding-bottom: 75px;
   }
   .skills .container .capsule-wrap .capsule-item {
+    width: 175px;
+    height: 220px;
     margin-right: 20px;
     margin-left: 20px;
   }
@@ -982,13 +1047,108 @@ h4 {
   .portfolio .container .project-highlight-right .info-col h2 {
     font-size: 2.5rem;
   }
+  .portfolio .container .others-projects .container h1 {
+    text-align: left;
+    margin-bottom: 30px;
+  }
   .portfolio .container .others-projects .container .project-gallery {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .portfolio .container .others-projects .container .project-gallery .item-card {
+    width: 230px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .portfolio .container .others-projects .container .project-gallery .action-row {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .contact .container .content-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+  }
+  .contact .container .content-row .info-col {
+    width: 400px;
+    padding: 56px 56px 56px 0;
+    border-bottom: none;
+    border-right: 2px solid var(--body-divider-color);
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .contact .container .content-row .info-col h3 {
+    font-size: 1.875rem;
+  }
+  .contact .container .content-row .info-col .contact-row {
+    margin-top: 80px;
+  }
+  .contact .container .content-row .form-col {
+    width: 100%;
+    padding: 40px 0px 56px 56px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .contact .container .content-row .form-col .form-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contact .container .content-row .form-col .form-row .name-input {
+    width: 70%;
+    margin-right: 40px;
+  }
+  .contact .container .content-row .form-col .form-row .phone-input {
+    width: 30%;
+  }
+  .contact .container .content-row .form-col .action-row {
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
+  .footer {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+  .footer .container .social-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .portfolio .container .others-projects .container .project-gallery .item-card {
-    width: 230px;
+  .footer .container .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer .container .navigation .nav {
+    width: 300px;
+  }
+  .footer .container .navigation .credits-row .author {
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
